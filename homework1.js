@@ -82,14 +82,30 @@ const divide2Parameters = (x = 0, y = 1) => {
 console.log(divide2Parameters(3, 4));
 
 //Write a function that takes a name (a string) and returns a greeting
-
+/*
+<<
+<<
+<<
+<
+HEAD */
 //const returnGreeting = name => {
 //  typeof putName == 'string' && typeof parseInt(putName) == 'number' ? console.log(`Hello, my name is ${name}`) : console.log(`${name} is probably not a name!`);
 //}
 //let putName = prompt('put a name, please');                                               //commented as being annoying
 //console.log(typeof putName);
+/* ===
+ ===
+ = */
+const returnGreeting = name => {
+    typeof name == 'string' && /^[a-zA-Z]+$/.test(name) ? console.log(`Hello, my name is ${name}`) : console.log(`${name} is probably not a name!`);
+}
+let putName = prompt('put a name, please'); //commented as being annoying
+console.log(typeof putName); // >>>
+/*>>>
+>
+1178 f2edfd5f8d367cc05baa9c5a95f9183f7488 */
 //console.log(parseInt(putName)); 
-//console.log(returnGreeting(putName));
+console.log(returnGreeting(putName));
 //console.log(typeof parseInt('123'));
 //console.log(typeof parseInt('abc'));
 //problem 1  - I noticed that even if i put a number it works. I want to filter prompt input - select only strings.
@@ -137,3 +153,32 @@ for (const mentor of mentorsArray) {
     let mentorUpper = mentor.toUpperCase();
     console.log(`HELLO ${mentorUpper}`)
 }
+
+
+
+//just to try
+/*
+let putName = 'adam1';
+//console.log(isNaN(Number(putName)));
+
+const returnGreetings = name => {
+    isNaN(Number(name)) == true ? console.log(`Hello, my name is ${name}`) : console.log(`${name} is probably not a name!`);
+}
+//console.log(typeof putName);
+console.log(returnGreetings('adam'));
+console.log(returnGreetings('adam2'));
+console.log(returnGreetings('234a'));
+//console.log(isNaN(Number(putName)));
+
+//it is enough to have one letter and it passess. */
+
+
+const returnGreetings = name => {
+
+    /^[a - zA - Z] + $ /.test(name) == true ? console.log(`Hello, my name is ${name}`) : console.log(`${name} is probably not a name!`);
+}
+
+console.log(returnGreetings('abc'));
+
+
+console.log(/^[a - zA - Z] + $ /.test(1));
