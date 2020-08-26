@@ -99,7 +99,7 @@ HEAD */
 const returnGreeting = name => {
     typeof name == 'string' && /^[a-zA-Z]+$/.test(name) ? console.log(`Hello, my name is ${name}`) : console.log(`${name} is probably not a name!`);
 }
-let putName = prompt('put a name, please'); //commented as being annoying
+let putName = 'put a name, please'; //commented as being annoying
 console.log(typeof putName); // >>>
 /*>>>
 >
@@ -155,30 +155,80 @@ for (const mentor of mentorsArray) {
 }
 
 
+//MODULE 2 -----------------------------------------------------------------------------------------------------------------------
 
-//just to try
-/*
-let putName = 'adam1';
-//console.log(isNaN(Number(putName)));
+//// There are syntax errors in this code - can you fix it to pass the tests?
 
-const returnGreetings = name => {
-    isNaN(Number(name)) == true ? console.log(`Hello, my name is ${name}`) : console.log(`${name} is probably not a name!`);
+function addNumbers(a, b, c) {
+    return a + b + c;
 }
-//console.log(typeof putName);
-console.log(returnGreetings('adam'));
-console.log(returnGreetings('adam2'));
-console.log(returnGreetings('234a'));
-//console.log(isNaN(Number(putName)));
+console.log(addNumbers(1, 2, 7))
 
-//it is enough to have one letter and it passess. */
-
-
-const returnGreetings = name => {
-
-    /^[a - zA - Z] + $ /.test(name) == true ? console.log(`Hello, my name is ${name}`) : console.log(`${name} is probably not a name!`);
+function introduceMe(name, age) {
+    return "Hello, my name is " + name + " and I am " +
+        age + " years old.";
 }
 
-console.log(returnGreetings('abc'));
+console.log(introduceMe('Marcin', 20));
+
+function getTotal(a, b) {
+    total = a + b;
+
+    // Use string interpolation here
+    return `The total is  ${total}`
+}
+console.log(getTotal(12, 18));
+
+function trimWord(word) {
+    return word.trim();
+}
+
+console.log('trimmed word is ' + trimWord('          aaa.    '))
 
 
-console.log(/^[a - zA - Z] + $ /.test(1));
+function getWordLength(word) {
+    return word.length;
+}
+console.log('It has ' + getWordLength('Litera') + ' numbers')
+
+
+function multiply(a, b, c) {
+    return a * b * c;
+}
+console.log('Total is ' + multiply(2, 2, 2));
+
+// Add comments to explain what this function does. You're meant to use Google!
+function getNumber() { //it takes a random number between 0 and 1 and multiply it by 10.
+    return Math.random() * 10;
+}
+
+console.log(getNumber());
+
+// Add comments to explain what this function does. You're meant to use Google!
+function s(w1, w2) { //it concatenate two expressions
+    return w1.concat(w2);
+}
+
+console.log(s('alfa', 'beta'))
+
+function concatenate(firstWord, secondWord, thirdWord) {
+    return firstWord.concat(secondWord, thirdWord)
+}
+console.log(concatenate('alfa', 'beta', 'gamma'))
+
+
+//MODULE 3----------------------------------------------------------------------------------------------------------------------------
+
+convertToUSD = priceP => {
+    return priceP * 1.4
+
+}
+
+convertToReal = priceP => {
+    return priceP * 5.7 * 0.99
+
+}
+
+let engPrice = 10
+console.log(`Price in england is ${engPrice} , and in dollars is ${convertToUSD(engPrice)}`);
+console.log(`Price in england is ${engPrice} , and in realis ${convertToReal(engPrice)}`);
