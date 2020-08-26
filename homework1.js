@@ -83,11 +83,11 @@ console.log(divide2Parameters(3, 4));
 
 //Write a function that takes a name (a string) and returns a greeting
 
-const returnGreeting = name => {
-    typeof putName == 'string' && typeof parseInt(putName) == 'number' ? console.log(`Hello, my name is ${name}`) : console.log(`${name} is probably not a name!`);
-}
+//const returnGreeting = name => {
+//  typeof putName == 'string' && typeof parseInt(putName) == 'number' ? console.log(`Hello, my name is ${name}`) : console.log(`${name} is probably not a name!`);
+//}
 //let putName = prompt('put a name, please');                                               //commented as being annoying
-console.log(typeof putName);
+//console.log(typeof putName);
 //console.log(parseInt(putName)); 
 //console.log(returnGreeting(putName));
 //console.log(typeof parseInt('123'));
@@ -137,3 +137,32 @@ for (const mentor of mentorsArray) {
     let mentorUpper = mentor.toUpperCase();
     console.log(`HELLO ${mentorUpper}`)
 }
+
+
+
+//just to try
+/*
+let putName = 'adam1';
+//console.log(isNaN(Number(putName)));
+
+const returnGreetings = name => {
+    isNaN(Number(name)) == true ? console.log(`Hello, my name is ${name}`) : console.log(`${name} is probably not a name!`);
+}
+//console.log(typeof putName);
+console.log(returnGreetings('adam'));
+console.log(returnGreetings('adam2'));
+console.log(returnGreetings('234a'));
+//console.log(isNaN(Number(putName)));
+
+//it is enough to have one letter and it passess. */
+
+
+const returnGreetings = name => {
+
+    /^[a - zA - Z] + $ /.test(name) == true ? console.log(`Hello, my name is ${name}`) : console.log(`${name} is probably not a name!`);
+}
+
+console.log(returnGreetings('abc'));
+
+
+console.log(/^[a - zA - Z] + $ /.test(1));
