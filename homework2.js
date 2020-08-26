@@ -39,11 +39,11 @@ console.log("Do person A and person B have the the same name?", sameName);
 //D - PREDICATES
 
 function isNegative(number) {
-    return result = number < 0
+    return number < 0;
 }
 
 function isBetweenZeroAnd10(number) {
-    return result = (number > 0 && number < 10)
+    return number > 0 && number < 10;
 }
 
 var number = 5;
@@ -80,7 +80,7 @@ console.log("Is either Html or CSS knowledge above 5?", cssOrHtmlAbove5);
 
 
 function isBetween5and10(number) {
-    return result = (number >= 5 && number <= 10)
+    return number >= 5 && number <= 1;
 }
 
 const isShortName = name => {
@@ -88,7 +88,7 @@ const isShortName = name => {
 }
 
 const startsWithD = name => {
-    return name.charAt(0) == 'D'
+    return name.startsWith('D'); // more flexible than charAt()
 
 }
 
@@ -101,12 +101,7 @@ console.log("Does Daniel start with 'D'?", startsWithD("Daniel"));
 //G - CONDITIONALS -2 
 
 function negativeOrPositive(number) {
-    if (number < 0) {
-        return 'negative'
-    } else {
-        return 'positive'
-    }
-
+    return number < 0 ? 'negative' : 'positive';
 }
 var number1 = 5;
 var number2 = -1;
@@ -119,12 +114,7 @@ console.log(number3 + " is " + negativeOrPositive(number3));
 //
 
 function studentPassed(grade) {
-    if (grade >= 50) {
-        return 'passed'
-    } else {
-        return 'failed'
-    }
-
+    return grade >= 50 ? 'passed' : 'failed';
 }
 var grade1 = 49;
 var grade2 = 50;
@@ -137,14 +127,18 @@ console.log("'" + grade3 + "': " + studentPassed(grade3))
 
 function calculateGrade(mark) {
     if (mark >= 80) {
-        return 'A'
-    } else if (mark >= 60) {
-        return 'B'
-    } else if (mark >= 50) {
-        return 'C'
-    } else {
-        return 'failed'
+        return 'A';
     }
+
+    if (mark >= 60) {
+        return 'B';
+    }
+
+    if (mark >= 50) {
+        return 'C';
+    }
+
+    return 'failed';
 }
 
 var grade1 = 49;
@@ -180,11 +174,11 @@ console.log(mentors);
 //J ARRAY GET SET
 
 function first(arr) {
-    return arr[0]; // complete this statement
+    return array && array.length ? arr[0] : null; // complete this statement
 }
 
 function last(arr) {
-    return arr[arr.length - 1]; // complete this statement
+    return array && array.length ? arr[arr.length - 1] : null; // complete this statement
 }
 
 var numbers = [1, 2, 3];
