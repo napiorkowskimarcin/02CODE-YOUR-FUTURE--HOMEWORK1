@@ -195,3 +195,29 @@ console.log(last(numbers));
 console.log(last(names));
 
 ///MODULE 2
+// The below functions are syntactically correct but not outputting the right results.
+// Look at the tests and see how you can fix them.
+array1 = [' A ', ' b ', ' C ', ' d ', ' e ', ' f '];
+console.log(array1)
+// const tidyUpString = array1.map(function (x) {
+//     return x.trim()
+// })
+
+// console.log(tidyUpString);
+
+function tidyItUp(strArr) {
+    return strArr.trim();
+}
+
+let array2 = array1.map(tidyItUp);
+console.log(array2);
+
+function tidyIyUpAll(str) {
+    for (let el of str) {
+        el = el.toLowerCase();
+        el = el.trim();
+        return str;
+    }
+}
+
+console.log(tidyIyUpAll(array1));
