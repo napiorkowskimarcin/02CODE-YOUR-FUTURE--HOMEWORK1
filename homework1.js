@@ -83,13 +83,21 @@ console.log(divide2Parameters(3, 4));
 
 //Write a function that takes a name (a string) and returns a greeting
 
+<<<<<<< HEAD
 //const returnGreeting = name => {
 //  typeof putName == 'string' && typeof parseInt(putName) == 'number' ? console.log(`Hello, my name is ${name}`) : console.log(`${name} is probably not a name!`);
 //}
 //let putName = prompt('put a name, please');                                               //commented as being annoying
 //console.log(typeof putName);
+=======
+const returnGreeting = name => {
+    typeof name == 'string' && /^[a-zA-Z]+$/.test(name) ? console.log(`Hello, my name is ${name}`) : console.log(`${name} is probably not a name!`);
+}
+let putName = prompt('put a name, please');                                               //commented as being annoying
+console.log(typeof putName);
+>>>>>>> 1178f2edfd5f8d367cc05baa9c5a95f9183f7488
 //console.log(parseInt(putName)); 
-//console.log(returnGreeting(putName));
+console.log(returnGreeting(putName));
 //console.log(typeof parseInt('123'));
 //console.log(typeof parseInt('abc'));
 //problem 1  - I noticed that even if i put a number it works. I want to filter prompt input - select only strings.
