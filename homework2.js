@@ -197,27 +197,56 @@ console.log(last(names));
 ///MODULE 2
 // The below functions are syntactically correct but not outputting the right results.
 // Look at the tests and see how you can fix them.
+
 array1 = [' A ', ' b ', ' C ', ' d ', ' e ', ' f '];
 console.log(array1)
-// const tidyUpString = array1.map(function (x) {
-//     return x.trim()
-// })
 
-// console.log(tidyUpString);
 
-function tidyItUp(strArr) {
-    return strArr.trim();
+/*
+Complete the function to check if the variable `num` satisfies the following requirements:
+- is a number
+- is even
+- is less than or equal to 100
+Tip: use logical operators
+*/
+validation = varX => {
+    typeof varX == 'number' && varX % 2 == 0 && varX < 100 && varX > 0 ? console.log('is number, is even, is greater than 0 and less than100') : console.log('not a good one!');
+}
+
+console.log(validation(12));
+console.log(validation(-2));
+console.log(validation('asvas'));
+
+/*
+Write a function that:
+- takes an array of strings as input
+- removes any spaces in the beginning or end of the strings
+- removes any forward slashes (/) in the strings
+- makes the string all lowercase
+*/
+
+tidyItUp = strArr => {
+    return strArr.trim().toLowerCase();
 }
 
 let array2 = array1.map(tidyItUp);
 console.log(array2);
+/* 
+Write a function that returns a copy of the given array arr, but with the element at the given index, index removed.
+The function must NOT change the original array, arr.
+*/
 
-function tidyIyUpAll(str) {
-    for (let el of str) {
-        el = el.toLowerCase();
-        el = el.trim();
-        return str;
-    }
+remove = (num, i, j = 1) => {
+    num.splice([i], [j]);
+    return num;
 }
 
-console.log(tidyIyUpAll(array1));
+console.log(remove(array2, 2, 3));
+
+/*
+Write a function that:
+- takes an array of numbers as input
+- returns an array of strings formatted as percentages (e.g. 10 => "10%")
+- the numbers must be rounded to 2 decimal places
+- numbers greater 100 must be replaced with 100
+*/
