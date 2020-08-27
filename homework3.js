@@ -141,3 +141,82 @@ let arrChanged2 = arrFE.map((index) => {
         return index
     }
 }).forEach(index => console.log(index));
+
+
+//G ARRAY METHODS 
+var numbersG = [3, 2, 1];
+var sortedNumbers = numbersG.sort(); // complete this statement
+
+/* 
+  DO NOT EDIT BELOW THIS LINE
+  --------------------------- */
+
+console.log(sortedNumbers);
+
+var mentorsG = ["Daniel", "Irina", "Rares"];
+var studentsG = ["Rukmini", "Abdul", "Austine", "Swathi"];
+
+var everyoneG = mentorsG.concat(studentsG); // complete this statement
+
+/* 
+  DO NOT EDIT BELOW THIS LINE
+  --------------------------- */
+
+console.log(everyoneG);
+
+//H ARRAY METHODS - 2
+
+var everyoneH = [
+    "Daniel",
+    "Irina",
+    "Rares",
+    "Rukmini",
+    "Abdul",
+    "Austine",
+    "Swathi"
+];
+
+var firstFive = everyoneH.slice(0, 5); // complete this statement
+var lastFive = everyoneH.slice(2); // complete this statement
+
+
+/* 
+  DO NOT EDIT BELOW THIS LINE
+  --------------------------- */
+
+console.log(firstFive);
+console.log(lastFive);
+
+function capitalise(str) {
+    return str.toUpperCase()
+}
+
+/* 
+  DO NOT EDIT BELOW THIS LINE
+  --------------------------- */
+var name = "daniel";
+
+console.log(capitalise(name));
+console.log(capitalise("hello"));
+
+var ukNations = ["Scotland", "Wales", "England", "Northern Ireland"];
+
+function isInUK(country) {
+
+    return ukNations.includes(country);; // complete this statement
+}
+
+/* 
+  DO NOT EDIT BELOW THIS LINE
+  --------------------------- */
+console.log(isInUK("France"));
+console.log(isInUK("Republic of Ireland"));
+console.log(isInUK("England"));
+
+/* 
+  EXPECTED RESULT
+  ---------------
+  false
+  false
+  true
+*/
