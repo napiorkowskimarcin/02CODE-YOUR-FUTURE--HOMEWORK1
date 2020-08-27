@@ -55,9 +55,17 @@ if (groupIsOnlyStudents) {
 }
 
 //D - ARRAY FILTER
-//let simpleArr = [1, 'a', true]
+let simpleArr = [1, 'a', true]
 //let mapElements = simpleArr.map(c => typeof c);
 //console.log(mapElements);
+console.log(simpleArr.every(a => {
+    typeof a == 'number'
+}));
+
+function isNumber(arr) {
+    return arr.filter(a => typeof a == 'number');
+}
+// I DID NOT MANAGE TO FINISH IT. NEED TO COME BACK TO THIS PLACE - NEED TO USE EVERY!- NEED TO USE EVERY!- NEED TO USE EVERY!- NEED TO USE EVERY!
 
 console.log('exercise D')
 
@@ -66,17 +74,22 @@ let pairsBy = [
     [1, 2],
     [2, 1], null, [1], false, "whoops"
 ];
-console.log(pairsBy);
+//console.log(pairsBy);
 
 let filterArr = pairsBy.filter(a => Array.isArray(a)).filter(b => b.length >= 2);
-console.log(filterArr);
+//console.log(filterArr);
 
 let filteringArr = arr => arr.filter(a => Array.isArray(a)).filter(b => b.length >= 2);
-let mapElementsofArray = arrTomap => arrTomap.map(elements => elements.map(c => typeof c == 'number'));
+console.log(filteringArr(pairsBy));
+let pairsByFiltered = filteringArr(pairsBy);
+console.log(pairsByFiltered);
 
-console.log(mapElementsofArray(filterArr));
-let filteredArr = mapElementsofArray(filterArr);
-console.log(filteredArr);
+
+//let mapElementsofArray = arrTomap => arrTomap.map(elements => elements.map(c => typeof c == 'number'));
+
+//console.log(mapElementsofArray(filterArr));
+//let filteredArr = mapElementsofArray(filterArr);
+//console.log(filteredArr);
 
 //let filteredElementsOfArray = arr1 => arr1.filter(mapElementsofArray);
 //console.log(filteredArr.filter(filteredElementsOfArray));
