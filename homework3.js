@@ -59,30 +59,13 @@ if (groupIsOnlyStudents) {
 console.log('exercise D')
 
 let pairsBy = [
-    [0, 3],
+    [0, 'a'],
     [1, 2],
     [2, 1], null, [1], false, "whoops"
 ];
+console.log(pairsBy);
 
-checkIfArray = item => item.map(element => {
-    return Array.isArray(element);
-})
-console.log(checkIfArray(pairsBy));
-pairsBy = pairsBy.filter(checkIfArray);
-//console.log(checkIfArray(pairsBy));
-/*
-typeofElementsInside = item => item.map(element => {
-    return (typeof element == 'object')
-});
-
-isNull = item => item.map(element => {
-    return element != null;
-})
+let filterArr = pairsBy.filter(a => Array.isArray(a)).filter(b => b.length >= 2);
 
 
-console.log(typeofElementsInside(pairsBy));
-console.log(isNull(pairsBy));
-
-pairsBy = pairsBy.filter(isNull);
-*/
-//console.log(pairsBy);
+console.log(filterArr);
