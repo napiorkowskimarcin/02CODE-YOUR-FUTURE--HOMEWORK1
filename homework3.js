@@ -71,6 +71,7 @@ console.log(pairsBy);
 let filterArr = pairsBy.filter(a => Array.isArray(a)).filter(b => b.length >= 2);
 console.log(filterArr);
 
+let filteringArr = arr => arr.filter(a => Array.isArray(a)).filter(b => b.length >= 2);
 let mapElementsofArray = arrTomap => arrTomap.map(elements => elements.map(c => typeof c == 'number'));
 
 console.log(mapElementsofArray(filterArr));
