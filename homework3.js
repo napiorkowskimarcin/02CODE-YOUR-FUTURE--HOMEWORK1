@@ -93,3 +93,51 @@ console.log(pairsByFiltered);
 
 //let filteredElementsOfArray = arr1 => arr1.filter(mapElementsofArray);
 //console.log(filteredArr.filter(filteredElementsOfArray));
+
+// E - MAP FILTER
+
+const numbers = [0.1, 0.2, 0.3, 0.4, 0.5];
+
+let m100 = arr => arr.map(number => number * 100);
+console.log(m100(numbers));
+
+// F for each
+let arrFE = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
+
+
+// let arrChange = arr => arr.map(function (index) {
+//     if (index % 3 == '0' && index % 5 == '0') {
+//         return 'buzzfizz'
+//     } else if (index % 3 == '0') {
+//         return 'fizz'
+//     } else if (index % 5 == '0') {
+//         return 'buzz'
+//     } else {
+//         return index
+//     }
+// })
+//console.log(arrChange(arrFE));
+
+// let arrChanged = arrFE.map(function (index) {
+//     if (index % 3 == '0' && index % 5 == '0') {
+//         return 'buzzfizz'
+//     } else if (index % 3 == '0') {
+//         return 'fizz'
+//     } else if (index % 5 == '0') {
+//         return 'buzz'
+//     } else {
+//         return index
+//     }
+// }).forEach(index => console.log(index));
+
+let arrChanged2 = arrFE.map((index) => {
+    if (index % 3 == '0' && index % 5 == '0') {
+        return 'buzzfizz'
+    } else if (index % 3 == '0') {
+        return 'fizz'
+    } else if (index % 5 == '0') {
+        return 'buzz'
+    } else {
+        return index
+    }
+}).forEach(index => console.log(index));
