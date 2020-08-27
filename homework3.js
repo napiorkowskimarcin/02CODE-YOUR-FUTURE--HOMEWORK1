@@ -55,6 +55,9 @@ if (groupIsOnlyStudents) {
 }
 
 //D - ARRAY FILTER
+//let simpleArr = [1, 'a', true]
+//let mapElements = simpleArr.map(c => typeof c);
+//console.log(mapElements);
 
 console.log('exercise D')
 
@@ -66,6 +69,13 @@ let pairsBy = [
 console.log(pairsBy);
 
 let filterArr = pairsBy.filter(a => Array.isArray(a)).filter(b => b.length >= 2);
-
-
 console.log(filterArr);
+
+let mapElementsofArray = arrTomap => arrTomap.map(elements => elements.map(c => typeof c == 'number'));
+
+console.log(mapElementsofArray(filterArr));
+let filteredArr = mapElementsofArray(filterArr);
+console.log(filteredArr);
+
+//let filteredElementsOfArray = arr1 => arr1.filter(mapElementsofArray);
+//console.log(filteredArr.filter(filteredElementsOfArray));
