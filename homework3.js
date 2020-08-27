@@ -64,13 +64,19 @@ let pairsBy = [
     [2, 1], null, [1], false, "whoops"
 ];
 
-
+checkIfArray = item => item.map(element => {
+    return Array.isArray(element);
+})
+console.log(checkIfArray(pairsBy));
+pairsBy = pairsBy.filter(checkIfArray);
+//console.log(checkIfArray(pairsBy));
+/*
 typeofElementsInside = item => item.map(element => {
     return (typeof element == 'object')
 });
 
 isNull = item => item.map(element => {
-    return element == null;
+    return element != null;
 })
 
 
@@ -78,4 +84,5 @@ console.log(typeofElementsInside(pairsBy));
 console.log(isNull(pairsBy));
 
 pairsBy = pairsBy.filter(isNull);
+*/
 //console.log(pairsBy);
