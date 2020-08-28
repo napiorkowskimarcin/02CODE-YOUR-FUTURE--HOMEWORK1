@@ -47,3 +47,138 @@ let oxy3New = oxygenLevels3.map(x => {
     return (element > 19.5 && element < 23.5)
 });
 console.log(oxy3New);
+
+let oxyTrial = oxygenLevels1.map(x => parseFloat(x, 10)).find(y => {
+    return (y > 19.5 && y < 23.5)
+});
+/*
+  The space travellers have safely landed and are foraging for food in the natural wildlife.
+  There are bushes with many different colour berries.
+  The pink berries are the ONLY safe ones to eat.
+  If any other berries are present, it's best not to eat from the bush at all!
+  Create a function which checks if the bush has ALL PINK berries and is safe for the astronauts to eat from the bush.
+  Use the tests to confirm which message to return
+*/
+
+bushChecker = (name) => {
+    return name.every(a => a === 'pink');
+}
+
+/* ======= TESTS - DO NOT MODIFY ===== */
+
+let bushBerryColours1 = ["pink", "pink", "pink", "neon", "pink", "transparent"]
+let bushBerryColours2 = ["pink", "pink", "pink", "pink"]
+
+/*
+  The voyagers decide that they quite like this planet, and some of them want to settle there and colonise it.
+  They call the planet "Alpha" and they decide that the FAMILIES whose last names start with 'A' should stay,
+  while the others go on in search of other planets to call home.
+  Create a function that returns an array of colonisers that will stay, according to the above rules.
+  NOTE: don't include any element that is not a "family".
+*/
+
+colonisers = name => {
+    return name.filter(a => a[0] === 'A')
+}
+
+
+/* ======= TESTS - DO NOT MODIFY ===== */
+
+const voyagers = [
+    "Adam family",
+    "Potter family",
+    "Eric",
+    "Aldous",
+    "Button family",
+    "Jude",
+    "Carmichael",
+    "Bunny",
+    "Asimov",
+    "Oscar family",
+    "Avery family",
+    "Archer family"
+];
+
+/*
+  Only students who have attended enough classes are eligible to sit an exam.
+  Create a function which:
+  - Accepts an array which contains all the students' names and their attendance counts
+    (see tests to confirm how this data will be structured)
+  - Returns an array containing only the names of the who have attended AT LEAST 8 classes
+*/
+
+let eli = array => array.filter((item) => item[1] >= 8).flat().filter((item) => {
+    return typeof item === 'string'
+});
+
+
+/* ======= TESTS - DO NOT MODIFY ===== */
+
+const attendances = [
+    ["Ahmed", 8],
+    ["Clement", 10],
+    ["Elamin", 6],
+    ["Adam", 7],
+    ["Tayoa", 11],
+    ["Nina", 10]
+]
+
+/*
+  I am new to London and would like to know what transport I can take to different famous locations.
+  An array with London locations, and the forms of transport you can take to get there, have been provided.
+  Return an array of where I can go if I only want to use a specific mode of transport.
+  NOTE: only the names should be returned, not the means of transport.
+*/
+
+let locFilter = transportWay => {
+    return londonLocations.filter(name => name.includes(transportWay));
+}
+let locFilter2 = transportWay => {
+    return londonLocations.filter(name => name.includes(transportWay)).flat().filter(a => {
+        return (a != 'bus' && a != 'tube' && a != 'river boat' && a != 'tube' && a != 'air line' && a != 'dlr') //IT IS NOT A NICE SOLUTION, I NEED TO FILTER IT BY ARRAY
+    })
+}
+ways = ["bus", "river boat", "dlr", "air line", "tube"]
+
+let locFilter3 = transportWay => {
+    return londonLocations.filter(name => name.includes(transportWay)).flat().filter(name => !ways.includes(name)); // -----------------------------------TO CHECK
+}
+
+function isStudent(name1, name2) {
+    return name1.every(item => name2.includes(item))
+}
+
+/* ======= TESTS - DO NOT MODIFY ===== */
+
+const londonLocations = [
+    ["Angel", "tube", "bus"],
+    ["Greenwich", "bus", "river boat", "dlr", "air line", "tube"],
+    ["London Bridge", "tube", "river boat"],
+    ["Tower Bridge", "tube", "bus"],
+]
+
+let journeyPlanner =
+    londonLocations.filter(name => name.includes('bus'));
+
+
+/*
+  You are given a list of some London street names.
+  
+  Write a function that will return all street names which contain 'Lane' in their name.
+*/
+
+
+
+/* ======= TESTS - DO NOT MODIFY ===== */
+
+const streetNames = [
+    "Abchurch Lane",
+    "Adam's Court",
+    "Addle Hill",
+    "Addle Lane",
+    "Alban Highwalk"
+]
+
+laneFilter = arr => {
+    return arr.filter(a => a.includes("Lane"));
+}
