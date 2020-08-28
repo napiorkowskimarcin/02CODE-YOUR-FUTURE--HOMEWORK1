@@ -48,9 +48,7 @@ let oxy3New = oxygenLevels3.map(x => {
 });
 console.log(oxy3New);
 
-let oxyTrial = oxygenLevels1.map(x => parseFloat(x, 10)).find(y => {
-    return (y > 19.5 && y < 23.5)
-});
+let oxyTrial = oxygenLevels1.map(x => parseFloat(x, 10)).find(y => y > 19.5 && y < 23.5);
 /*
   The space travellers have safely landed and are foraging for food in the natural wildlife.
   There are bushes with many different colour berries.
@@ -182,3 +180,33 @@ const streetNames = [
 laneFilter = arr => {
     return arr.filter(a => a.includes("Lane"));
 }
+
+/* 
+
+- Have at least 5 characters.
+- Have at least one English uppercase letter (A-Z)
+- Have at least one English lowercase letter (a-z)
+- Have at least one number (0-9)
+- Have at least one non-alphanumeric symbol ("!", "#", "$", "%", ".", "*", "&")
+
+*/
+
+
+const regex = /[A-Z]/
+const regex2 = /[a-z]/
+const regex3 = /[0-9]/
+const regex4 = /[!#$%^&*]/
+
+const regexM = /((?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])).{5,}/
+
+
+checkPassShort2 = str => regex.test(str) && regex2.test(str) && regex3.test(str) && regex4.test(str) && str.length >= 5;
+checkPassShort3 = str => regexM.test(str);
+
+Pass = arr => arr.filter(a => regexM.test(a));
+
+/* ======= TESTS - DO NOT MODIFY ===== */
+
+const passwords1 = ["Se%5", "TktE.TJTU", "384#HsHF", "dvyyeyy!5", "tryT3729"];
+const passwords2 = ["StUFf27%", "Pl3nty!", "Jai33", "shajsaUA**&&", "Pl3nty!"];
+const password = "StUFf27%";
